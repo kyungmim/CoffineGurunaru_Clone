@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .box{width: 1000px; height: 50px; background-color: bisque;}
+        .box_inner{width: 10px;height: 50px; background-color: red;}        
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <script lang="java">
+        $(function(){
+
+            var point= Number(prompt("누적 금액을 입력 하세요"))
+    
+            if(point >=2000000){
+                $(".box_inner").animate({width: "400px"}, 500)
+            } else if(point >=1500000){
+                $(".box_inner").animate({width: "800px"}, 500)
+            } else if(point >=1000000){
+                $(".box_inner").animate({width: "1200px"}, 500)
+            }else if(point >=500000){
+                $(".box_inner").animate({width: "1600px"}, 500)
+            }
+        })
+
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="box_inner"></div>
+    </div>
+</body>
+</html>
